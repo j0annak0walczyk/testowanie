@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        <h1>Testowanie aplikacji</h1>
+        <ul>
+          <li>
+            Czym jest testowanie?
+            <ul>
+              <li>Manualne</li>
+              <li>Automatyczne</li>
+            </ul>
+          </li>
+          <li>
+            Ciut więcej o testach:
+            <ul>
+              <li>testing piramid, testing trophy</li>
+              <li>TDD</li>
+              <li>
+                <a href="https://martinfowler.com/bliki/TestPyramid.html"
+                  >Test Pyramid</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests"
+                  >Static vs Unit vs Integration vs E2E Testing for Frontend
+                  Apps</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            Wprowadzenie do testowania jednostkowego
+            <ul>
+              <li>Anatomia testu</li>
+              <li>Co testować?</li>
+              <li>Testowalny kod</li>
+            </ul>
+          </li>
+          <li>Tworzenie testów jednostkowych</li>
+          <li>
+            Wprowadzenie do Cypress i testowania e2e
+            <ul>
+              <li>Cypress - czym jest?</li>
+              <li>Instalacja Cypress-a w projekcie</li>
+            </ul>
+          </li>
+          <li>Tworzenie testów e2e z wykorzystaniem Cypress</li>
+        </ul>
+      </article>
+      <article>
+        <img src="./piramid.webp" alt="" />
+      </article>
+      <article>
+        <img src="./trophy.webp" alt="" />
+      </article>
+      <article>
+        <h2>Instalacja Cypress</h2>
+        <pre>
+            <code>
+                npm install cypress --save-dev
+            </code>
+        </pre>
+        <p>Dodatnie skryptu do projektu</p>
+        <pre>
+            <code>
+                {
+                    "scripts": {
+                      "cypress:open": "cypress open"
+                    }
+                  }
+            </code>
+        </pre>
+        <p>Uruchomienie serwera Cypresowego</p>
+
+        <pre>
+            <code>
+                npm run cypress:open
+            </code>
+        </pre>
+        <p>Mała przypadłość :/</p>
+        <pre>
+            <code>
+                npm install -D eslint-plugin-cypress
+
+                "eslintConfig": { "extends": [ "plugin:cypress/recommended" ] },
+            </code>
+        </pre>
+      </article>
+    </main>
+  </body>
+</html>
