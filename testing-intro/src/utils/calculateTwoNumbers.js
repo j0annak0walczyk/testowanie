@@ -11,3 +11,15 @@
  *
  *
  */
+
+import { addTwoNumbers } from "./addTwoNumbers";
+import { divideTwoNumbers } from "./divideTwoNumbers";
+import { multiplyTwoNumbers } from "./multiplyTwoNumbers";
+import { subtractTwoNumbers } from "./subtractTwoNumbers";
+
+export const calculateTwoNumbers = function (num1, num2, sign) {
+  if (sign === "+") return addTwoNumbers(num1, num2);
+  if (sign === "-") return subtractTwoNumbers(num1, num2);
+  if (sign === "/") return divideTwoNumbers(num1, num2);
+  if (sign === "*") return multiplyTwoNumbers(num1, num2);
+};

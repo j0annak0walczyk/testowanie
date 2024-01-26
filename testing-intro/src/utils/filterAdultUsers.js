@@ -1,5 +1,5 @@
 export const filterAdultUsers = (users) => {
-  if (Array.isArray(users)) {
+  if (!Array.isArray(users)) {
     throw new Error("Wrong format of data");
   }
 
@@ -7,5 +7,5 @@ export const filterAdultUsers = (users) => {
     return "List of users is empty";
   }
 
-  return users.filter(({ age }) => age > 18);
+  return users.filter(({ age }) => age >= 18);
 };
