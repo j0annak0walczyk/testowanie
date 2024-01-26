@@ -28,7 +28,10 @@ export const PasswordValidator = () => {
       <input
         type="password"
         value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={(e) => {
+          setPassword(e.target.value);
+          setPasswordMessage("");
+        }}
       />
       <p>{passwordMessage}</p>
       <button onClick={validatePassword}>Validate</button>

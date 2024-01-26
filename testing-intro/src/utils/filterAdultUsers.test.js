@@ -35,7 +35,7 @@ describe("Testowanie filterAdultUsers", () => {
 
   // Dlaczego ten test nie działa?
   test("Testowanie, czy przejdzie obiekt zamiast tablicy", () => {
-    expect(
+    expect(() =>
       filterAdultUsers({
         lastName: "Doe",
         name: "Asia",
@@ -46,7 +46,7 @@ describe("Testowanie filterAdultUsers", () => {
 
   // Dlaczego ten test nie działa?
   test("Testowanie, czy przejdzie number zamiast tablicy", () => {
-    expect(filterAdultUsers(20)).toThrow();
+    expect(() => filterAdultUsers(20)).toThrow();
   });
 
   test("Testowanie, gdy tablica jest pusta", () => {
